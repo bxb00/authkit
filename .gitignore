@@ -9,3 +9,6 @@ build/
 .coverage
 htmlcov/
 .DS_Store
+
+# IDE
+.idea/
