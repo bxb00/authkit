@@ -13,3 +13,6 @@ htmlcov/
 # IDE
 .idea/
 docs/dev_snapshot.md
+
+# Local collaboration snapshots
+docs/dev_snapshot.md

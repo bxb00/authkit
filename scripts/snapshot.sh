@@ -6,7 +6,7 @@ OUT="docs/dev_snapshot.md"
 {
   echo "# Dev Snapshot"
   echo
-  echo "Generated: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+  echo "Generated (UTC): $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
   echo
   echo "## Git status"
   echo '```'
@@ -38,7 +38,7 @@ OUT="docs/dev_snapshot.md"
   git diff --cached --stat
   echo '```'
   echo
-  echo "## Tracked files (top-level)"
+  echo "## Repository tree (top-level)"
   echo '```'
   ls -la
   echo '```'
