@@ -16,3 +16,26 @@ docs/dev_snapshot.md
 
 # Local collaboration snapshots
 docs/dev_snapshot.md
+
+# Generated snapshots
+/docs/dev_snapshot.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+
+# Virtual env
+.venv/
+.env
