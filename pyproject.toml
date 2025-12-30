@@ -1,0 +1,59 @@
+
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-authkit"
+version = "0.1.0"
+description = "Reusable, production-grade authentication kit for Django (session + JWT + social)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Milad Nouri" }]
+keywords = ["django", "authentication", "jwt", "oauth", "security"]
+classifiers = [
+  "Framework :: Django",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "Django>=5.0,<6",
+  "djangorestframework>=3.15,<4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-django>=4.8",
+  "ruff>=0.5",
+  "black>=24.0",
+  "pre-commit>=3.7",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-q"
+testpaths = ["tests"]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
